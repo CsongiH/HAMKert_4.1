@@ -10,14 +10,7 @@
     <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-    <title>Klassy Cafe - Restaurant HTML Template</title>
-    <!--
-
-    TemplateMo 558 Klassy Cafe
-
-    https://templatemo.com/tm-558-klassy-cafe
-
-    -->
+    <title>HAMkert étterem</title>
     <!-- Additional CSS Files -->
     <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
 
@@ -50,43 +43,47 @@
         <div class="row">
             <div class="col-12">
                 <nav class="main-nav">
-                    <!-- ***** Logo Start ***** -->
-                    <a href="/redirects" class="logo">
-                        <img src="assets/images/klassy-logo.png" align="klassy cafe html template">
-                    </a>
-                    <!-- ***** Logo End ***** -->
                     <!-- ***** Menu Start ***** -->
                     <ul class="nav">
-                        <li class="scroll-to-section"><a href="/redirects" class="active">Home</a></li>
-                        <li class="scroll-to-section"><a href="/redirects">About</a></li>
-                        <li class="scroll-to-section"><a href="/redirects">Menu</a></li>
-                        <li class="scroll-to-section"><a href="/redirects">Chefs</a></li>
-                        <li class="scroll-to-section"><a href="/redirects">Contact Us</a></li>
-
-                        <li class="scroll-to-section"><a href="#reservation">Contact Us</a></li>
-
+                        <li><a href="#top" class="logo"><img src="assets/images/klassy-logo.png" id="logo-image"></a></li>
+                        <li class="scroll-to-section"><a href="#top">Főoldal</a></li>
+                        <li class="scroll-to-section"><a href="#about">Rólunk</a></li>
+                        <li class="scroll-to-section"><a href="/redirects">Menü</a></li>
+                        <li class="scroll-to-section"><a href="#chefs">Alapítók</a></li>
+                        <li class="scroll-to-section"><a href="#reservation">Kapcsolat</a></li>
                         <li class="scroll-to-section" style="background-color: #fa5849" >
                                 @auth
                                     <a href="{{url('/showcart',Auth::user()->id)}}">
-                                Cart[{{$count }}]
+                                Kosár[{{$count }}]
                                     </a>
                                     @endauth
 
                             @guest
                                         <a href="{{url('/login')}}">
-                                            Cart[0]
+                                            Kosár[0]
                                         </a>
                                     @endguest
 
                         </li>
-
+<!-- Felhasznalo actionok eleje -->
                         <li>
                             @if (Route::has('login'))
-                                <div class="sm:fixed sm:top-0 sm:right-0 p-6 text-right">
+                                <div class="sm:fixed sm:top-0 sm:right-0 p-6 text-left">
                                     @auth
+                                        <li><a href="{{ route('profile.show') }}">
+                                                Profilom
+                                            </a></li>
                                         <li>
-                                            <x-app-layout></x-app-layout>
-                                        </li>
+                                                <form method="POST" action="{{ route('logout') }}" x-data>
+                                                    @csrf
+                                                    <button  href="{{ route('logout') }}"
+                                                       @click.prevent="$root.submit();"
+                                                             class="clean-button">
+                                                        {{ __('Kilépés') }}
+                                                    </button>
+                                                </form>
+                                            </li>
+
                                     @else
                                        <li> <a href="{{ route('login') }}" class="font-semibold text-gray-600 hover:text-gray-900 focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">Log in</a></li>
 
@@ -109,16 +106,17 @@
 <!-- ***** Header Area End ***** -->
 
 <!-- ***** Main Banner Area Start ***** -->
-<div id="top">
+<section class="section" id="top">
+
     <div class="container-fluid">
         <div class="row">
             <div class="col-lg-4">
                 <div class="left-content">
                     <div class="inner-content">
-                        <h4>KlassyCafe</h4>
-                        <h6>THE BEST EXPERIENCE</h6>
+                        <h4>HAMkert</h4>
+                        <h6>Ételbe zárt csoda</h6>
                         <div class="main-white-button scroll-to-section">
-                            <a href="#reservation">Make A Reservation</a>
+                            <a href="#reservation">Asztalfoglalás</a>
                         </div>
                     </div>
                 </div>
@@ -152,7 +150,7 @@
             </div>
         </div>
     </div>
-</div>
+</section>
 <!-- ***** Main Banner Area End ***** -->
 
 <!-- ***** About Area Starts ***** -->

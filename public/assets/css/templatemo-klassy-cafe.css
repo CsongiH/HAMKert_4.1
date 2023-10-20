@@ -23,16 +23,16 @@ Table of contents
 12. portfolio
 
 --------------------------------------------- */
-/* 
+/*
 ---------------------------------------------
 font & reset css
---------------------------------------------- 
+---------------------------------------------
 */
 @import url("https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900");
-/* 
+/*
 ---------------------------------------------
 reset
---------------------------------------------- 
+---------------------------------------------
 */
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, div
 pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q,
@@ -89,6 +89,19 @@ html, body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+
+
+
+#logo-image {
+    height: 40px;
+}
+
+
+
+
+
+
+
 a {
   text-decoration: none !important;
 }
@@ -108,10 +121,10 @@ p {
   color: #2a2a2a;
 }
 
-/* 
+/*
 ---------------------------------------------
 global styles
---------------------------------------------- 
+---------------------------------------------
 */
 html,
 body {
@@ -194,17 +207,17 @@ body {
 .section-heading h2 {
   line-height: 40px;
   margin-top: 20px;
-  margin-bottom: 25px; 
+  margin-bottom: 25px;
   font-size: 30px;
   font-weight: 900;
   color: #2a2a2a;
 }
 
 
-/* 
+/*
 ---------------------------------------------
 header
---------------------------------------------- 
+---------------------------------------------
 */
 
 .background-header {
@@ -641,10 +654,10 @@ header
 }
 
 
-/* 
+/*
 ---------------------------------------------
 banner
---------------------------------------------- 
+---------------------------------------------
 */
 
 #top {
@@ -1001,7 +1014,7 @@ menu
 #menu .owl-dots {
   display: none;
 }
-    
+
 #menu .owl-nav .owl-prev{
   margin-right: 10px;
   outline: none;
@@ -1176,10 +1189,10 @@ chefs
 }
 
 
-/* 
+/*
 ---------------------------------------------
 reservation
---------------------------------------------- 
+---------------------------------------------
 */
 
 #reservation .section-heading {
@@ -1264,6 +1277,32 @@ reservation
   background-color: #fff;
   border-radius: 5px;
 }
+
+
+
+.clean-button {
+    background-color: #ffffff; /* White background */
+    border: 1px solid transparent; /* Fully transparent border */
+    color: #333; /* Text color */
+    padding: 7px 20px; /* Padding for button size */
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-weight: 400;
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    cursor: pointer; /* Show a pointer cursor on hover */
+    transition: background-color 0.3s, color 0.3s; /* Smooth transitions on hover */
+}
+
+.clean-button:hover {
+    background-color: #f1f1f1; /* Light gray background on hover */
+    color: #555; /* Darker text color on hover */
+}
+
+
+
+
 
 #contact h4 {
   text-align: center;
@@ -1461,10 +1500,10 @@ offers
 }
 
 
-/* 
+/*
 ---------------------------------------------
 footer
---------------------------------------------- 
+---------------------------------------------
 */
 
 footer {
@@ -1526,10 +1565,10 @@ footer .right-text-content ul li a:hover {
   color: #2a2a2a;
 }
 
-/* 
+/*
 ---------------------------------------------
 responsive
---------------------------------------------- 
+---------------------------------------------
 */
 
 @media (max-width: 992px) {
