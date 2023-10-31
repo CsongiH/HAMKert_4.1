@@ -1,44 +1,44 @@
-<x-app-layout></x-app-layout>
+
 <html>
 <head>
-    @include("admin.admincss");
+    <link rel="stylesheet" href="assets/css/templatemo-klassy-cafe.css">
 </head>
 <body>
-<div class="container-scroller">
-@include("admin.navbar");
+<div class="container-scroller" style="height:2000px">
+@include("admin.navbar")
 <div style="position: relative;top: 60px; right: -150px">
-    <form action="{{url('/uploadfood')}}" method="post" enctype="multipart/form-data">
+    <form class="clean-form" action="{{url('/uploadfood')}}" method="post" enctype="multipart/form-data" >
         @csrf
         <div>
-            <label style="padding: 30px">Title</label>
-            <input style="color: black" type="text" name="title" placeholder="write a title" required>
+            <label>Étel</label>
+            <input style="color: black" type="text" name="Étel" placeholder="Adja meg az étel nevét" required>
         </div>
         <div>
-            <label style="padding: 30px">Price</label>
-            <input style="color: black" type="number" name="price" placeholder="write a price" required>
+            <label>Ár</label>
+            <input style="color: black" type="number" name="Ár" placeholder="Adja meg az étel árát" required>
         </div>
         <div>
-            <label style="padding: 30px">Image</label>
+            <label>Kép</label>
             <input type="file" name="image" required>
         </div>
         <div>
-            <label style="padding: 30px">Description</label>
-            <input style="color: black" type="text" name="description" placeholder="write a description" required>
+            <label>Leírás</label>
+            <input style="color: black" type="text" name="description" placeholder="Adja meg az étel leírását" required>
         </div>
         <div>
-            <input style="color: blue" type="submit" value="Save">
+            <input class="clean-button" type="submit" value="Mentés">
         </div>
     </form>
 
     <div>
-        <table style="background-color: #000000">
+        <table class="clean-table">
             <tr>
-                <th style="padding: 30px">Food Name</th>
-                <th style="padding: 30px">Price</th>
-                <th style="padding: 30px">Description</th>
-                <th style="padding: 30px">Image</th>
-                <th style="padding: 30px">Action</th>
-                <th style="padding: 30px">Action2</th>
+                <th style="padding: 30px">Étel</th>
+                <th style="padding: 30px">Ár</th>
+                <th style="padding: 30px">Leírás</th>
+                <th style="padding: 30px">Kép</th>
+                <th style="padding: 30px">Módosítás</th>
+                <th style="padding: 30px">Törlés</th>
             </tr>
             @foreach($data as $data)
             <tr text-align="center">
@@ -46,19 +46,17 @@
                 <td>{{$data->price}}</td>
                 <td>{{$data->description}}</td>
                 <td><img height="150" width="150" src="/foodimage/{{$data->image}}"></td>
-                <td><a href="{{url('/deletemenu',$data->id)}}">Delete</a></td>
-                <td><a href="{{url('/updateview',$data->id)}}">Update</a></td>
+                <td><a href="{{url('/updateview',$data->id)}}">Frissítés</a></td>
+                <td><a href="{{url('/deletemenu',$data->id)}}">Törlés</a></td>
             </tr>
             @endforeach
-        </table>
-        <h4>list</h4>
-        <h4>end</h4>
 
+        </table>
 
     </div>
 
 </div>
 </div>
-@include("admin.adminscript");
+@include("admin.adminscript")
 </body>
 </html>

@@ -1,3 +1,27 @@
+.clean-button {
+    background-color: #ffffff; /* White background */
+    border: 1px solid transparent; /* Fully transparent border */
+    color: #333; /* Text color */
+    padding: 7px 20px; /* Padding for button size */
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-weight: 400;
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    cursor: pointer; /* Show a pointer cursor on hover */
+    transition: background-color 0.3s, color 0.3s; /* Smooth transitions on hover */
+}
+
+.clean-button:hover {
+    background-color: #f1f1f1; /* Light gray background on hover */
+    color: #555; /* Darker text color on hover */
+}
+
+
+
+
+
 .nav-tabs {
 	.nav-link {
 		background: $nav-tabs-link-bg;
@@ -13,7 +37,7 @@
 		&:first-child {
 			.nav-link {
 				border-radius: 4px 0 0 0;
-			}	
+			}
 		}
 		&:last-child {
 			.nav-link {
@@ -33,7 +57,7 @@
 			&:first-child {
 				.nav-link {
 					border-radius: 4px 4px 0 0;
-				}	
+				}
 			}
 			&:last-child {
 				.nav-link {

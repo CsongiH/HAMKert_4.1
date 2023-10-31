@@ -1,20 +1,20 @@
 <head>
-    @include("admin.admincss");
+
 </head>
 <body>
-<x-app-layout></x-app-layout>
+
 <div class="container-scroller">
-@include("admin.navbar");
+@include("admin.navbar")
 
 <div style="position: relative; top: 70px;right: -150px">
-    <table >
+    <table class="clean-table">
         <tr text-align="center" >
-            <th style="padding: 30px">name</th>
-            <th style="padding: 30px">email</th>
-            <th style="padding: 30px">phone</th>
-            <th style="padding: 30px">date</th>
-            <th style="padding: 30px">time</th>
-            <th style="padding: 30px">Message</th>
+            <th style="padding: 30px">Név</th>
+            <th style="padding: 30px">E-Mail</th>
+            <th style="padding: 30px">Telefon</th>
+            <th style="padding: 30px">Dátum</th>
+            <th style="padding: 30px">Idő</th>
+            <th style="padding: 30px">Megjegyzés</th>
         </tr>
 
 
@@ -31,6 +31,6 @@
     </table>
 </div>
 </div>
-@include("admin.adminscript");
+@include("admin.adminscript")
 </body>
 </html>

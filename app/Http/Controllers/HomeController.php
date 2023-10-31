@@ -12,6 +12,7 @@ use App\Models\Food;
 
 use App\Models\Cart;
 
+
 class HomeController extends Controller
 {
     public function index(){
@@ -62,4 +63,19 @@ class HomeController extends Controller
         $data->delete();
         return redirect()->back();
     }
+
+    public function menu()
+    {
+        $data=food::all();
+        $usertype= Auth::user()->usertype;
+        if($usertype=='1'){
+            return view('admin.foodmenu');
+        }
+        else{
+            $user_id=Auth::id();
+            $count=cart::where('user_id',$user_id)->count();
+            return view('menu',compact('data','count'));
+        }
+    }
+
 }

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang=hu>
 
 <head>
 
@@ -48,10 +48,10 @@
                         <li><a href="#top" class="logo"><img src="assets/images/klassy-logo.png" id="logo-image"></a></li>
                         <li class="scroll-to-section"><a href="#top">Főoldal</a></li>
                         <li class="scroll-to-section"><a href="#about">Rólunk</a></li>
-                        <li class="scroll-to-section"><a href="/redirects">Menü</a></li>
+                        <li class="scroll-to-section"><a href="{{url('/menu')}}"> Menü </a> </li>
                         <li class="scroll-to-section"><a href="#chefs">Alapítók</a></li>
                         <li class="scroll-to-section"><a href="#reservation">Kapcsolat</a></li>
-                        <li class="scroll-to-section" style="background-color: #fa5849" >
+                        <li class="scroll-to-section" style="background-color: rgba(231,231,231,0.91); border-radius: 20px " >
                                 @auth
                                     <a href="{{url('/showcart',Auth::user()->id)}}">
                                 Kosár[{{$count }}]
@@ -74,10 +74,9 @@
                                                 Profilom
                                             </a></li>
                                         <li>
-                                                <form method="POST" action="{{ route('logout') }}" x-data>
+                                                <form method="POST" action="{{ route('logout') }}">
                                                     @csrf
                                                     <button  href="{{ route('logout') }}"
-                                                       @click.prevent="$root.submit();"
                                                              class="clean-button">
                                                         {{ __('Kilépés') }}
                                                     </button>
@@ -85,10 +84,10 @@
                                             </li>
 
                                     @else
-                                       <li> <a href="{{ route('login') }}" class="font-semibold text-gray-600 hover:text-gray-900 focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">Log in</a></li>
+                                       <li> <a href="{{ route('login') }}" class="font-semibold text-gray-600 hover:text-gray-900 focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">Bejelentkezés</a></li>
 
                                         @if (Route::has('register'))
-                                            <li>   <a href="{{ route('register') }}" class="ml-4 font-semibold text-gray-600 hover:text-gray-900 focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">Register</a></li>
+                                            <li>   <a href="{{ route('register') }}" class="ml-4 font-semibold text-gray-600 hover:text-gray-900 focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">Regisztrálás</a></li>
                                         @endif
                                     @endauth
                                 </div>
@@ -189,7 +188,7 @@
     </div>
 </section>
 <!-- ***** About Area Ends ***** -->
-@include("food")
+
 <!-- ***** Chefs Area Starts ***** -->
 <section class="section" id="chefs">
     <div class="container">

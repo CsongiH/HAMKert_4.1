@@ -2,14 +2,13 @@
 <html>
 <head>
     <base href="/public">
-    @include("admin.admincss");
 </head>
 <body>
 <div class="container-scroller">
 
-@include("admin.navbar");
+@include("admin.navbar")
     <div style="position: relative;top: 60px; right: -150px">
-        <form action="{{url('/update',$data->id)}}" method="post" enctype="multipart/form-data">
+        <form class="clean-form" action="{{url('/update',$data->id)}}" method="post" enctype="multipart/form-data">
             @csrf
             <div>
                 <label style="padding: 30px">Title</label>
@@ -34,6 +33,6 @@
     </div>
 </div>
 
-@include("admin.adminscript");
+@include("admin.adminscript")
 </body>
 </html>

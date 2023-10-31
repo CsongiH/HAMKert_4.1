@@ -95,8 +95,123 @@ html, body {
 #logo-image {
     height: 40px;
 }
+.clean-current-button{
+    background-color: #FA5849FF;
+    border: 1px solid transparent; /* Fully transparent border */
+    color: #333; /* Text color */
+    /* padding: 7px 20px;  Padding for button size */
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    border-radius: 20px;
+
+}
 
 
+.clean-form {
+    background-color: #222; /* Dark background for the form */
+    padding: 20px;
+}
+
+.clean-form label {
+    color: #fff; /* Text color for form labels */
+    display: block;
+    margin-bottom: 10px;
+}
+
+.clean-form input[type="text"],
+.clean-form input[type="number"],
+.clean-form input[type="file"],
+.clean-form input[type="email"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    background-color: #333; /* Dark gray input background */
+    color: #fff; /* Text color for input fields */
+    border: 1px solid #555; /* Slightly lighter border for input fields */
+}
+
+.clean-form input[type="submit"] {
+    background-color: #444; /* Dark gray background for the submit button */
+    color: #fff; /* Text color for the submit button */
+    border: 1px solid #555; /* Slightly lighter border for the submit button */
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+
+
+
+
+.clean-table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: transparent; /* Dark background for the table */
+    border: 1px solid transparent; /* Fully transparent border */
+    border-radius: 20px;
+}
+
+.clean-table th, .clean-table td {
+    border: 1px transparent; /* Fully transparent border for table cells */
+    padding: 10px;
+    text-align: left;
+;
+}
+
+.clean-table th {
+    background-color: #242934; /* Dark gray background for table header */
+}
+
+.clean-table tr:nth-child(even) {
+    background-color: #333; /* Dark gray background for even rows */
+}
+
+.clean-table tr:nth-child(odd) {
+    background-color: #222; /* Dark background for odd rows */
+}
+
+
+
+.clean-button {
+    background-color: #ffffff; /* White background */
+    border: 1px solid transparent; /* Fully transparent border */
+    color: #333; /* Text color */
+    padding: 7px 20px; /* Padding for button size */
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    cursor: pointer; /* Show a pointer cursor on hover */
+    transition: background-color 0.3s, color 0.3s; /* Smooth transitions on hover */
+}
+
+.clean-button:hover {
+    background-color: #fa5849; /* Light gray background on hover */
+    color: white; /* Darker text color on hover */
+}
+
+.clean-button-admin {
+    background-color: #191c24; /* White background */
+    border: 4px solid transparent; /* Fully transparent border */
+    border-radius: 20px;
+    color: #5c6d93; /* Text color */
+    padding: 7px 0px; /* Padding for button size */
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    cursor: pointer; /* Show a pointer cursor on hover */
+    transition: background-color 0.3s, color 0.3s; /* Smooth transitions on hover */
+}
+
+.clean-button-admin:hover {
+    background-color: #fa5849  ; /* Light gray background on hover */
+    color: #ffffff; /* Darker text color on hover */
+}
 
 
 
@@ -1277,31 +1392,6 @@ reservation
   background-color: #fff;
   border-radius: 5px;
 }
-
-
-
-.clean-button {
-    background-color: #ffffff; /* White background */
-    border: 1px solid transparent; /* Fully transparent border */
-    color: #333; /* Text color */
-    padding: 7px 20px; /* Padding for button size */
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-weight: 400;
-    font-family: 'Poppins', sans-serif;
-    font-size: 16px;
-    cursor: pointer; /* Show a pointer cursor on hover */
-    transition: background-color 0.3s, color 0.3s; /* Smooth transitions on hover */
-}
-
-.clean-button:hover {
-    background-color: #f1f1f1; /* Light gray background on hover */
-    color: #555; /* Darker text color on hover */
-}
-
-
-
 
 
 #contact h4 {
