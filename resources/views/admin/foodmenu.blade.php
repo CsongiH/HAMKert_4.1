@@ -3,19 +3,21 @@
 <head>
     <link rel="stylesheet" href="assets/css/templatemo-klassy-cafe.css">
 </head>
+@include("admin.admincss")
 <body>
 <div class="container-scroller" style="height:2000px">
 @include("admin.navbar")
+
 <div style="position: relative;top: 60px; right: -150px">
     <form class="clean-form" action="{{url('/uploadfood')}}" method="post" enctype="multipart/form-data" >
         @csrf
         <div>
             <label>Étel</label>
-            <input style="color: black" type="text" name="Étel" placeholder="Adja meg az étel nevét" required>
+            <input style="color: ghostwhite" type="text" name="title" placeholder="Adja meg az étel nevét" required>
         </div>
         <div>
             <label>Ár</label>
-            <input style="color: black" type="number" name="Ár" placeholder="Adja meg az étel árát" required>
+            <input style="color: ghostwhite" type="number" name="price" placeholder="Adja meg az étel árát" required>
         </div>
         <div>
             <label>Kép</label>
@@ -23,7 +25,7 @@
         </div>
         <div>
             <label>Leírás</label>
-            <input style="color: black" type="text" name="description" placeholder="Adja meg az étel leírását" required>
+            <input style="color: ghostwhite" type="text" name="description" placeholder="Adja meg az étel leírását" required>
         </div>
         <div>
             <input class="clean-button" type="submit" value="Mentés">

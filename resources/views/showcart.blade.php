@@ -59,13 +59,13 @@
                         <li><a href="/redirects" class="logo"><img src="assets/images/klassy-logo.png" id="logo-image"></a></li>
                         <li class="scroll-to-section"><a href="/redirects">Főoldal</a></li>
                         <li class="scroll-to-section"><a href="/redirects">Rólunk</a></li>
-                        <li class="scroll-to-section"><a href="/redirects">Menü</a></li>
+                        <li class="scroll-to-section"><a href="{{url('/menu')}}">Menü</a></li>
                         <li class="scroll-to-section"><a href="/redirects">Alapítók</a></li>
                         <li class="scroll-to-section"><a href="/redirects">Kapcsolat</a></li>
                         <li class="scroll-to-section" style="background-color: rgba(231,231,231,0.91); border-radius: 20px " >
                             @auth
                                 <a href="{{url('/showcart',Auth::user()->id)}}">
-                                    Kosár[{{$count }}]
+                                    Kosár[]
                                 </a>
                             @endauth
 
@@ -104,9 +104,6 @@
             </div>
             @endif
 
-            </li>
-
-            </ul>
 
             <!-- ***** Menu End ***** -->
             </nav>
@@ -122,20 +119,42 @@
         <th style="padding: 30px">Ár</th>
         <th style="padding: 30px">Mennyiség</th>
     </tr>
-
-        @foreach($data as $data)
+@if($count==0)
         <tr>
-            <td style="text-align: center" >{{$data->title}}</td>
-            <td style="text-align: center" >{{$data->price}}</td>
-            <td style="text-align: center" >{{$data->quantity}}</td>
-            <td><a href="{{url('/remove',$data->id)}}" class="btn btn-warning">Törlés</a></td>
-            <!--fogalmam sincs, eddig jo volt -->
+            <th>Nincs semmi a kosaradban.</th>
+        </tr>
+@endif
+        @foreach($data as $cartdata)
+        <tr>
+            <td style="text-align: center" >{{$cartdata->title}}</td>
+            <td style="text-align: center" >{{$cartdata->price}}</td>
+            <td style="text-align: center" >{{$cartdata->quantity}}</td>
+            <td><a href="{{url('/remove',$cartdata->order_id)}}" class="btn btn-warning">Törlés</a></td>
+            <td>{{$cartdata}}</td>
+            <!--fogalmam sincs, hogy eddig miert nem volt jo, de most valamiert megjavult -->
         @endforeach
 
         </tr>
-
 </table>
+
+
+
+
+    <form action="/session" method="POST">
+        <input type="hidden" name="_token" value="{{csrf_token()}}">
+        <button type="submit" id="checkout-live-button">Checkout</button>
+    </form>
+
+
+
 </div>
+
+
+
+
+
+
+
 
 
 

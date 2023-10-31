@@ -54,24 +54,31 @@ class HomeController extends Controller
 
     public function showcart(Request $request,$id){
         $count=cart::where('user_id',$id)->count();
-        $data2=cart::select('*')->where('user_id','=','$id')->get();
+        $usercart=cart::select('*')->where('user_id','=','$id')->get();
         $data=cart::where('user_id',$id)->join('food','carts.food_id','=','food.id')->get();
-        return view('showcart',compact('count','data','data2'));
+        return view('showcart',compact('count','data','usercart'));
     }
-    public function remove($id){
-        $data=cart::find($id);
-        $data->delete();
-        return redirect()->back();
+    public function remove($order_id){
+        $data=cart::find($order_id);
+        if (is_null($data)){
+            return redirect()->back();
+        }
+        else{
+            $data->delete();
+            return redirect()->back();
+        }
+
     }
 
     public function menu()
     {
         $data=food::all();
-        $usertype= Auth::user()->usertype;
-        if($usertype=='1'){
-            return view('admin.foodmenu');
+
+        if(is_null(Auth::user())){
+            return redirect('/login');
         }
         else{
+            $usertype= Auth::user()->usertype;
             $user_id=Auth::id();
             $count=cart::where('user_id',$user_id)->count();
             return view('menu',compact('data','count'));

@@ -95,6 +95,29 @@ html, body {
 #logo-image {
     height: 40px;
 }
+
+
+.grid-container {
+    padding: 10px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    grid-gap: 10px;
+
+}
+
+.grid-item {
+    border: 0px transparent;
+}
+
+.clean-quantity-set {
+    width: 66%;
+}
+
+.cart-button {
+    width: 33%;
+ }
+
+
 .clean-current-button{
     background-color: #FA5849FF;
     border: 1px solid transparent; /* Fully transparent border */
@@ -1046,35 +1069,19 @@ menu
   min-height: 400px;
   overflow: hidden;
   background-size: cover;
+    background-position: center;
   background-repeat: no-repeat;
-  overflow: hidden;
-}
-
-.card1 {
-  background-image: url(../images/menu-item-01.jpg);
-}
-.card2 {
-  background-image: url(../images/menu-item-02.jpg);
-}
-.card3 {
-  background-image: url(../images/menu-item-03.jpg);
-}
-.card4 {
-  background-image: url(../images/menu-item-04.jpg);
-}
-.card5 {
-  background-image: url(../images/menu-item-05.jpg);
 }
 
 .info {
+    padding-bottom: 50px;
   position: relative;
   width: 100%;
   background-color: #fb5849;
-  border: 1px solid #fb5849;
-  transform: translateY(100%)
+  transform: translateY(200px)
   translateY(120px)
   translateZ(0);
-  transition: transform 0.5s ease-out;
+  transition: transform 0.5s ease-in-out;
 }
 
 .card:hover .info,
@@ -1084,7 +1091,7 @@ menu
 
 .title {
   margin: 0;
-  padding: 30px 30px 20px 30px;
+  padding: 20px 30px 60px 30px;
   font-size: 20px;
   font-weight: 700;
   color: #fff;
@@ -1097,13 +1104,15 @@ menu
 
 #menu .price h6 {
   position: absolute;
-  width: 70px;
+  width: max-content;
+    padding-right: 10px;
+    padding-left: 10px;
   height: 70px;
   background-color: #fb5849;
   font-size: 20px;
-  font-weight: 700;
+  font-weight: 600;
   color: #fff;
-  border-radius: 3px;
+  border-bottom-right-radius: 20px;
   text-align: center;
   line-height: 70px;
 }

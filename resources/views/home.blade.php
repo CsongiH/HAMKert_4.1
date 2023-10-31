@@ -54,7 +54,7 @@
                         <li class="scroll-to-section" style="background-color: rgba(231,231,231,0.91); border-radius: 20px " >
                                 @auth
                                     <a href="{{url('/showcart',Auth::user()->id)}}">
-                                Kosár[{{$count }}]
+                                      Kosár []
                                     </a>
                                     @endauth
 

@@ -42,11 +42,20 @@ Route::get("/redirects",[HomeController::class,"redirects"]);
 
 Route::get("/showcart/{id}",[HomeController::class,"showcart"]);
 
-Route::get("/remove/{id}",[HomeController::class,"remove"]);
+Route::get("/remove/{order_id}",[HomeController::class,"remove"]);
 
 Route::post("/addcart/{id}",[HomeController::class,"addcart"]);
 
 Route::get("/menu",[HomeController::class,"menu"]);
+
+Route::get('/grid', 'GridController@index');
+
+Route::get('/checkout', 'App\Http\Controllers\StripeController@checkout')->name('checkout');
+
+Route::post('/session', 'App\Http\Controllers\StripeController@session')->name('session');
+
+Route::get('/success', 'App\Http\Controllers\StripeController@success')->name('success');
+
 
 Route::middleware([
     'auth:sanctum',
