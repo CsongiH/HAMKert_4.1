@@ -9,8 +9,4 @@ class Food extends Model
 {
     use HasFactory;
 
-    //public mixed $title;
-    //public mixed $image;
-    //public mixed $description;
-    //public mixed $price;
 }

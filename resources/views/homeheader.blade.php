@@ -52,10 +52,6 @@
                 @endauth
             </div>
             @endif
-
-            </li>
-
-            </ul>
             <!-- ***** Menu End ***** -->
             </nav>
         </div>

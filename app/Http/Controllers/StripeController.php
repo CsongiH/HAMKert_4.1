@@ -20,7 +20,6 @@ class StripeController extends Controller
     {
 
         $user_id=Auth::id();
-
         $cartsum =100 * DB::table('food as f')
             ->selectRaw('SUM(f.price) as cartsum')
             ->join('carts as c', 'f.id', '=', 'c.food_id')
@@ -53,6 +52,6 @@ class StripeController extends Controller
 
     public function success()
     {
-        return "Yay, It works!!!";
+        return redirect(url('/paymentDone'));
     }
 }

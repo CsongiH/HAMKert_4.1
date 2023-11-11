@@ -42,7 +42,7 @@ Route::get("/redirects",[HomeController::class,"redirects"]);
 
 Route::get("/showcart/{id}",[HomeController::class,"showcart"]);
 
-Route::get("/remove/{order_id}",[HomeController::class,"remove"]);
+Route::get("/remove/{item_id}",[HomeController::class,"remove"]);
 
 Route::post("/addcart/{id}",[HomeController::class,"addcart"]);
 
@@ -55,6 +55,8 @@ Route::get('/checkout', 'App\Http\Controllers\StripeController@checkout')->name(
 Route::post('/session', 'App\Http\Controllers\StripeController@session')->name('session');
 
 Route::get('/success', 'App\Http\Controllers\StripeController@success')->name('success');
+
+Route::post("/paymentDone",[HomeController::class,"paymentDone"]);
 
 
 Route::middleware([

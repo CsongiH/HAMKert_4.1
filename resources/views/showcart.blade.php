@@ -125,13 +125,15 @@
         </tr>
 @endif
         @foreach($data as $cartdata)
+            @if($cartdata->isPaid == 0)
         <tr>
             <td style="text-align: center" >{{$cartdata->title}}</td>
             <td style="text-align: center" >{{$cartdata->price}}</td>
             <td style="text-align: center" >{{$cartdata->quantity}}</td>
-            <td><a href="{{url('/remove',$cartdata->order_id)}}" class="btn btn-warning">Törlés</a></td>
+            <td><a href="{{url('/remove',$cartdata->item_id)}}" class="btn btn-warning">Törlés</a></td>
             <td>{{$cartdata}}</td>
             <!--fogalmam sincs, hogy eddig miert nem volt jo, de most valamiert megjavult -->
+            @endif
         @endforeach
 
         </tr>

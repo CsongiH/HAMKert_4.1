@@ -10,7 +10,7 @@
     <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-    <title>HAMkert étterem</title>
+    <title>HAMKert étterem</title>
     <!-- Additional CSS Files -->
     <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
 
@@ -112,7 +112,7 @@
             <div class="col-lg-4">
                 <div class="left-content">
                     <div class="inner-content">
-                        <h4>HAMkert</h4>
+                        <h4>HAMKert</h4>
                         <h6>Ételbe zárt csoda</h6>
                         <div class="main-white-button scroll-to-section">
                             <a href="#reservation">Asztalfoglalás</a>
@@ -160,7 +160,7 @@
                 <div class="left-text-content">
                     <div class="section-heading">
                         <h6>About Us</h6>
-                        <h2>We Leave A Delicious Memory For You</h2>
+                        <h2>A HAMKert története</h2>
                     </div>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum eget laoreet elit. Nam ut bibendum risus. Quisque porttitor augue quis justo sodales, eu eleifend velit viverra. Etiam faucibus dictum lacus egestas semper. Nunc eget sem turpis. Sed interdum arcu ac magna rhoncus, at sodales nulla pulvinar. Nam enim erat, ultrices a diam quis, blandit gravida mauris. Cras aliquet commodo enim ut dignissim. Nullam pulvinar dapibus diam vitae condimentum. Maecenas fringilla, purus quis efficitur facilisis, risus sapien auctor est, ac tincidunt quam elit ut enim. Aenean lacinia nisl ultricies purus ultrices cursus. Nam porttitor, justo ac tincidunt tincidunt, leo odio volutpat quam, nec fermentum tortor ante varius neque. Ut auctor fringilla sapien, lobortis lobortis felis accumsan ac.</p>
                     <div class="row">
@@ -213,7 +213,7 @@
                         <img src="assets/images/chefs-01.jpg" alt="Chef #1">
                     </div>
                     <div class="down-content">
-                        <h4>Randy Walker</h4>
+                        <h4>Horváth Csongor</h4>
                         <span>Pastry Chef</span>
                     </div>
                 </div>
@@ -230,7 +230,7 @@
                         <img src="assets/images/chefs-02.jpg" alt="Chef #2">
                     </div>
                     <div class="down-content">
-                        <h4>David Martin</h4>
+                        <h4>Antal Kristóf</h4>
                         <span>Cookie Chef</span>
                     </div>
                 </div>
@@ -247,7 +247,7 @@
                         <img src="assets/images/chefs-03.jpg" alt="Chef #3">
                     </div>
                     <div class="down-content">
-                        <h4>Peter Perkson</h4>
+                        <h4>Magasi Botond</h4>
                         <span>Pancake Chef</span>
                     </div>
                 </div>
