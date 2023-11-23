@@ -45,22 +45,22 @@
                 <nav class="main-nav">
                     <!-- ***** Menu Start ***** -->
                     <ul class="nav">
-                        <li><a href="#top" class="logo"><img src="assets/images/klassy-logo.png" id="logo-image"></a></li>
+                        <li><a href="#top" class="logo"><img src="assets/images/hamkert.png" id="logo-image"></a></li>
                         <li class="scroll-to-section"><a href="#top">Főoldal</a></li>
                         <li class="scroll-to-section"><a href="#about">Rólunk</a></li>
                         <li class="scroll-to-section"><a href="{{url('/menu')}}"> Menü </a> </li>
                         <li class="scroll-to-section"><a href="#chefs">Alapítók</a></li>
                         <li class="scroll-to-section"><a href="#reservation">Kapcsolat</a></li>
-                        <li class="scroll-to-section" style="background-color: rgba(231,231,231,0.91); border-radius: 20px " >
+                        <li class="scroll-to-section" style="background-color: rgba(231,231,231,0.91); border-radius: 20px ">
                                 @auth
                                     <a href="{{url('/showcart',Auth::user()->id)}}">
-                                      Kosár []
+                                      Kosár
                                     </a>
                                     @endauth
 
                             @guest
                                         <a href="{{url('/login')}}">
-                                            Kosár[0]
+                                            Kosár
                                         </a>
                                     @endguest
 
@@ -93,9 +93,6 @@
                                 </div>
                             @endif
 
-                        </li>
-
-                    </ul>
                     <!-- ***** Menu End ***** -->
                 </nav>
             </div>
@@ -159,27 +156,19 @@
             <div class="col-lg-6 col-md-6 col-xs-12">
                 <div class="left-text-content">
                     <div class="section-heading">
-                        <h6>About Us</h6>
+                        <h6>Rólunk</h6>
                         <h2>A HAMKert története</h2>
                     </div>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum eget laoreet elit. Nam ut bibendum risus. Quisque porttitor augue quis justo sodales, eu eleifend velit viverra. Etiam faucibus dictum lacus egestas semper. Nunc eget sem turpis. Sed interdum arcu ac magna rhoncus, at sodales nulla pulvinar. Nam enim erat, ultrices a diam quis, blandit gravida mauris. Cras aliquet commodo enim ut dignissim. Nullam pulvinar dapibus diam vitae condimentum. Maecenas fringilla, purus quis efficitur facilisis, risus sapien auctor est, ac tincidunt quam elit ut enim. Aenean lacinia nisl ultricies purus ultrices cursus. Nam porttitor, justo ac tincidunt tincidunt, leo odio volutpat quam, nec fermentum tortor ante varius neque. Ut auctor fringilla sapien, lobortis lobortis felis accumsan ac.</p>
-                    <div class="row">
-                        <div class="col-4">
-                            <img src="assets/images/about-thumb-01.jpg" alt="">
-                        </div>
-                        <div class="col-4">
-                            <img src="assets/images/about-thumb-02.jpg" alt="">
-                        </div>
-                        <div class="col-4">
-                            <img src="assets/images/about-thumb-03.jpg" alt="">
-                        </div>
-                    </div>
+                    <p>A HAMKert éttermet Horváth Csongor, Antal Kristóf és Magasi Botond egy borozó lepusztult épületéből hozták létre 2023-ban. A három barát mindig is lelkes gasztronómiai rajongók voltak, és a közös szenvedélyükből született meg az ötlet, hogy egyedi kulináris élményeket kínáljanak az érdeklődőknek.
+                        <br><br>
+                        Az étterem koncepciója a magas minőségű alapanyagok és a kreatív konyhaművészet köré épül. A séfek olyan ínycsiklandó fogásokat alkotnak, amelyek egyesítik a hagyományos helyi ízeket a modern gasztronómiai technikákkal. A menü változatos, figyelembe véve a szezonalitást és a helyi termelők friss alapanyagait.
+                        <br><br>
+                        Az étterem nem csupán egy hely, ahol az emberek étkeznek, hanem egy közösségi tér, ahol az ételek és az emberek egyaránt összekapcsolódnak. A HAMKert a jó hangulat, kiváló ételek és barátságos kiszolgálás otthonos helyét teremti meg, és mindenkinek lehetőséget ad arra, hogy részese legyen ennek a gasztronómiai kalandnak.
                 </div>
             </div>
             <div class="col-lg-6 col-md-6 col-xs-12">
                 <div class="right-content">
                     <div class="thumb">
-                        <a rel="nofollow" href="http://youtube.com"><i class="fa fa-play"></i></a>
                         <img src="assets/images/about-video-bg.jpg" alt="">
                     </div>
                 </div>
@@ -195,8 +184,8 @@
         <div class="row">
             <div class="col-lg-4 offset-lg-4 text-center">
                 <div class="section-heading">
-                    <h6>Our Chefs</h6>
-                    <h2>We offer the best ingredients for you</h2>
+                    <h6>Alapítók</h6>
+                    <h2>A HAMKert megálmodói</h2>
                 </div>
             </div>
         </div>
@@ -205,11 +194,6 @@
                 <div class="chef-item">
                     <div class="thumb">
                         <div class="overlay"></div>
-                        <ul class="social-icons">
-                            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                            <li><a href="#"><i class="fa fa-instagram"></i></a></li>
-                        </ul>
                         <img src="assets/images/chefs-01.jpg" alt="Chef #1">
                     </div>
                     <div class="down-content">
@@ -222,11 +206,6 @@
                 <div class="chef-item">
                     <div class="thumb">
                         <div class="overlay"></div>
-                        <ul class="social-icons">
-                            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                            <li><a href="#"><i class="fa fa-behance"></i></a></li>
-                        </ul>
                         <img src="assets/images/chefs-02.jpg" alt="Chef #2">
                     </div>
                     <div class="down-content">
@@ -239,11 +218,6 @@
                 <div class="chef-item">
                     <div class="thumb">
                         <div class="overlay"></div>
-                        <ul class="social-icons">
-                            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                            <li><a href="#"><i class="fa fa-google"></i></a></li>
-                        </ul>
                         <img src="assets/images/chefs-03.jpg" alt="Chef #3">
                     </div>
                     <div class="down-content">
@@ -260,7 +234,7 @@
 @include("reservation")
 
 <!-- ***** Footer Start ***** -->
-<footer>
+<footer style=" margin-top: 0px">
     <div class="container">
         <div class="row">
             <div class="col-lg-4 col-xs-12">
@@ -275,14 +249,14 @@
             </div>
             <div class="col-lg-4">
                 <div class="logo">
-                    <a href="index.html"><img src="assets/images/white-logo.png" alt=""></a>
+                    <a href="#top"><img src="assets/images/hamkert.png" alt=""></a>
                 </div>
             </div>
             <div class="col-lg-4 col-xs-12">
                 <div class="left-text-content">
-                    <p>© Copyright Klassy Cafe Co.
+                    <p>© HAMKert
 
-                        <br>Design: TemplateMo</p>
+                        <br>2023</p>
                 </div>
             </div>
         </div>

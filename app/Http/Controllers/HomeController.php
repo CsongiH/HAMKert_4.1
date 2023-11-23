@@ -55,7 +55,7 @@ class HomeController extends Controller
 
     public function showcart(Request $request, $id)
     {
-        $count = cart::where('user_id', $id)->count();
+        $count = cart::where('user_id', $id)->where('isPaid', 0)->count();
         $usercart = cart::select('*')->where('user_id', '=', '$id')->get();
         $data = cart::where('user_id', $id)->join('food', 'carts.food_id', '=', 'food.id')->get();
         return view('showcart', compact('count', 'data', 'usercart'));
@@ -75,23 +75,18 @@ class HomeController extends Controller
 
     public function menu()
     {
-        $data = food::all();
+
 
         if (is_null(Auth::user())) {
             return redirect('/login');
         } else {
+            $data = food::paginate(1);
             $user_id = Auth::id();
-            $count = cart::where('user_id', $user_id)->count();
-            return view('menu', compact('data', 'count'));
+            return view('menu', compact('data'));
         }
     }
 
     public function paymentDone(){
-        $user_id=Auth::id();
-        $completedOrders = Food::join('carts', 'food.id', '=', 'carts.food_id')
-            ->where('carts.user_id', $user_id)
-            ->select('food.item_id')
-            ->get();
-
+        return view('paymentDone');
     }
 }

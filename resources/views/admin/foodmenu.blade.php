@@ -5,7 +5,7 @@
 </head>
 @include("admin.admincss")
 <body>
-<div class="container-scroller" style="height:2000px">
+<div class="container-scroller" style="height:fit-content; padding-bottom: 100px">
 @include("admin.navbar")
 
 <div style="position: relative;top: 60px; right: -150px">
@@ -42,14 +42,14 @@
                 <th style="padding: 30px">Módosítás</th>
                 <th style="padding: 30px">Törlés</th>
             </tr>
-            @foreach($data as $data)
+            @foreach($data as $fooddata)
             <tr text-align="center">
-                <td>{{$data->title}}</td>
-                <td>{{$data->price}}</td>
-                <td>{{$data->description}}</td>
-                <td><img height="150" width="150" src="/foodimage/{{$data->image}}"></td>
-                <td><a href="{{url('/updateview',$data->id)}}">Frissítés</a></td>
-                <td><a href="{{url('/deletemenu',$data->id)}}">Törlés</a></td>
+                <td>{{$fooddata->title}}</td>
+                <td>{{$fooddata->price}}</td>
+                <td>{{$fooddata->description}}</td>
+                <td><img height="150" width="150" src="/foodimage/{{$fooddata->image}}"></td>
+                <td><a href="{{url('/updateview',$fooddata->id)}}">Frissítés</a></td>
+                <td><a href="{{url('/deletemenu',$fooddata->id)}}">Törlés</a></td>
             </tr>
             @endforeach
 

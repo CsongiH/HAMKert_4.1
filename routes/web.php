@@ -24,6 +24,8 @@ Route::get("/users",[AdminController::class,"users"]);
 
 Route::get("/deletemenu/{id}",[AdminController::class,"deletemenu"]);
 
+Route::get("/doneOrder/{id}",[AdminController::class,"doneOrder"]);
+
 Route::get("/foodmenu",[AdminController::class,"foodmenu"]);
 
 Route::post("/uploadfood",[AdminController::class,"upload"]);
@@ -56,7 +58,9 @@ Route::post('/session', 'App\Http\Controllers\StripeController@session')->name('
 
 Route::get('/success', 'App\Http\Controllers\StripeController@success')->name('success');
 
-Route::post("/paymentDone",[HomeController::class,"paymentDone"]);
+Route::get("/paymentDone",[HomeController::class,"paymentDone"]);
+
+Route::get("/adminorders",[AdminController::class,"adminorders"]);
 
 
 Route::middleware([

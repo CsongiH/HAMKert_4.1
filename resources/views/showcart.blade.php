@@ -56,7 +56,7 @@
 
 
                     <ul class="nav">
-                        <li><a href="/redirects" class="logo"><img src="assets/images/klassy-logo.png" id="logo-image"></a></li>
+                        <li><a href="/redirects" class="logo"><img src="assets/images/hamkert.png" id="logo-image"></a></li>
                         <li class="scroll-to-section"><a href="/redirects">Főoldal</a></li>
                         <li class="scroll-to-section"><a href="/redirects">Rólunk</a></li>
                         <li class="scroll-to-section"><a href="{{url('/menu')}}">Menü</a></li>
@@ -65,13 +65,13 @@
                         <li class="scroll-to-section" style="background-color: rgba(231,231,231,0.91); border-radius: 20px " >
                             @auth
                                 <a href="{{url('/showcart',Auth::user()->id)}}">
-                                    Kosár[]
+                                    Kosár
                                 </a>
                             @endauth
 
                             @guest
                                 <a href="{{url('/login')}}">
-                                    Kosár[0]
+                                    Kosár
                                 </a>
                             @endguest
 
@@ -112,44 +112,40 @@
     </div>
 </header>
 
-<div id="top">
-<table>
-    <tr text-align="center" background-color="grey">
+<div id="top" style="display: flex;justify-content: center;align-items: center;margin-top: 100px">
+<table style="padding: 10px; alignment: center">
+    <tr>
         <th style="padding: 30px">Étel neve</th>
         <th style="padding: 30px">Ár</th>
         <th style="padding: 30px">Mennyiség</th>
     </tr>
-@if($count==0)
+@if($count == 0)
         <tr>
             <th>Nincs semmi a kosaradban.</th>
         </tr>
 @endif
         @foreach($data as $cartdata)
-            @if($cartdata->isPaid == 0)
-        <tr>
-            <td style="text-align: center" >{{$cartdata->title}}</td>
-            <td style="text-align: center" >{{$cartdata->price}}</td>
-            <td style="text-align: center" >{{$cartdata->quantity}}</td>
-            <td><a href="{{url('/remove',$cartdata->item_id)}}" class="btn btn-warning">Törlés</a></td>
-            <td>{{$cartdata}}</td>
-            <!--fogalmam sincs, hogy eddig miert nem volt jo, de most valamiert megjavult -->
+            @if($cartdata->isPaid == 0 AND $cartdata->isDone == 0)
+        <tr style="margin: 50px">
+            <td style="text-align: center;padding: 10px" >{{$cartdata->title}}</td>
+            <td style="text-align: center;padding: 10px" >{{$cartdata->price}}</td>
+            <td style="text-align: center;padding: 10px" >{{$cartdata->quantity}}</td>
+            <td><a href="{{url('/remove',$cartdata->item_id)}}" class="btn btn-warning" style="background-color: #FA5849FF;border: transparent">Törlés</a></td>
             @endif
         @endforeach
 
         </tr>
 </table>
-
-
-
-
+</div>
+<div style="display: flex;justify-content: center;align-items: center">
     <form action="/session" method="POST">
         <input type="hidden" name="_token" value="{{csrf_token()}}">
-        <button type="submit" id="checkout-live-button">Checkout</button>
+        <button type="submit" id="checkout-live-button" class="clean-checkout-button" >Tovább a fizetéshez -></button>
     </form>
-
-
-
 </div>
+
+
+
 
 
 

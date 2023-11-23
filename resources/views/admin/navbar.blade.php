@@ -35,6 +35,17 @@
 
 
             <li class="nav-item menu-items">
+                <a class="nav-link" href="{{url('/adminorders')}}">
+              <span class="menu-icon">
+                <i class="mdi mdi-food-fork-drink"></i>
+              </span>
+                    <span class="menu-title">Rendelések</span>
+                </a>
+            </li>
+
+
+
+            <li class="nav-item menu-items">
                 <a class="nav-link" href="{{url('/viewreservation')}}">
               <span class="menu-icon">
                 <i class="mdi mdi-clock"></i>

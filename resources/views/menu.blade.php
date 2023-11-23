@@ -56,7 +56,7 @@
 
 
                     <ul class="nav">
-                        <li><a href="/redirects" class="logo"><img src="assets/images/klassy-logo.png" id="logo-image"></a></li>
+                        <li><a href="/redirects" class="logo"><img src="assets/images/hamkert.png" id="logo-image"></a></li>
                         <li class="scroll-to-section"><a href="/redirects">Főoldal</a></li>
                         <li class="scroll-to-section"><a href="/redirects">Rólunk</a></li>
                         <li class="clean-current-button"><a href="#top">Menü</a></li>
@@ -65,13 +65,13 @@
                         <li class="scroll-to-section" style="background-color: rgba(231,231,231,0.91); border-radius: 20px " >
                             @auth
                                 <a href="{{url('/showcart',Auth::user()->id)}}">
-                                    Kosár[{{$count }}]
+                                    Kosár
                                 </a>
                             @endauth
 
                             @guest
                                 <a href="{{url('/login')}}">
-                                    Kosár[0]
+                                    Kosár
                                 </a>
                             @endguest
 
@@ -111,13 +111,13 @@
 
 </header>
 
-<div id="top">
-    <div class="container">
-        <div class="row">
+<div id="top" >
+    <div class="container" >
+        <div class="row" style="justify-content: start">
             <div class="col-lg-4">
                 <div class="section-heading">
-                    <h6>Our Menu</h6>
-                    <h2>Our selection of cakes with quality taste</h2>
+                    <h6>Kínálatunk</h6>
+                    <h2>Válogasson számtalan ínycsiklandó fogásunk közt!</h2>
                 </div>
             </div>
         </div>
@@ -137,21 +137,24 @@
                     <div class='info'>
                         <h1 class='title'>{{$fooddata->title}}</h1>
                         <p class='description'>{{$fooddata->description}}</p>
-                        <div class="main-text-button">
-                            <div class="scroll-to-section"><a href="#reservation">Make Reservation <i class="fa fa-angle-down"></i></a></div>
-                        </div>
+                        <div class="main-text-button"></div>
                     </div>
                 </div>
-                <input type="number" name="quantity" min="1" value="1" class="clean-quantity-set">
-                <input class="cart-button" type="submit" value="add to cart">
+                <input type="hidden" name="quantity" value="1">
+                <input class="cart-button" type="submit" value="Korsárba">
 
             </div>
         </form>
     @endforeach
 </div>
+    <div style="margin: 0 auto; width: 10vw; padding: 20px">
+    {{$data->links()}}
+    </div>
 </section>
 
 <!--Ételek listája végződik -->
+
+
 
 
 
@@ -196,3 +199,4 @@
 </script>
 </body>
 </html>
+<!--paginate, landing page, update foto, hirlevel -->

@@ -8,7 +8,12 @@ use App\Models\User;
 
 use App\Models\Food;
 
+use App\Models\Cart;
+
 use App\Models\Reservation;
+
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
 
 class AdminController extends Controller
 {
@@ -18,11 +23,6 @@ class AdminController extends Controller
         return view("admin.users", compact("data"));
     }
 
-    public function foodmenu()
-    {
-        $data = food::all();
-        return view("admin.foodmenu", compact("data"));
-    }
 
     public function upload(request $request)
     {
@@ -83,8 +83,38 @@ class AdminController extends Controller
         return redirect()->back();
     }
 
-    public function viewreservation(){
-        $data=reservation::all();
+    public function viewreservation()
+    {
+        $data = reservation::all();
         return view("admin.adminreservation", compact("data"));
+    }
+
+
+    public function foodmenu()
+    {
+        $data = food::all();
+        return view("admin.foodmenu", compact("data"));
+    }
+
+
+    public function adminorders()
+    {
+        $orders = cart::join('food', 'carts.food_id', '=', 'food.id')
+            ->select('carts.user_id', DB::raw('GROUP_CONCAT(food.title SEPARATOR ", ") as food_titles'))
+            ->where('carts.isPaid', 1)
+            ->where('carts.isDone', 0)
+            ->groupBy('carts.user_id')
+            ->get();
+        return view("admin.adminorders", compact("orders"));
+    }
+
+    public function doneOrder($user_id)
+    {
+       DB::table('carts')
+            ->where('user_id', $user_id)
+            ->where('isPaid', 1)
+            ->where('isDone', 0)
+            ->update(['isDone' => 1]);
+        return redirect()->back();
     }
 }
