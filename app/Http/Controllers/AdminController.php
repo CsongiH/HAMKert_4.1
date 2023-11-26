@@ -85,14 +85,14 @@ class AdminController extends Controller
 
     public function viewreservation()
     {
-        $data = reservation::all();
+        $data = reservation::paginate(5);
         return view("admin.adminreservation", compact("data"));
     }
 
 
     public function foodmenu()
     {
-        $data = food::all();
+        $data = food::paginate(5);
         return view("admin.foodmenu", compact("data"));
     }
 
@@ -104,7 +104,7 @@ class AdminController extends Controller
             ->where('carts.isPaid', 1)
             ->where('carts.isDone', 0)
             ->groupBy('carts.user_id')
-            ->get();
+            ->paginate(1);
         return view("admin.adminorders", compact("orders"));
     }
 

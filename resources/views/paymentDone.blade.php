@@ -25,7 +25,7 @@
 
     <link rel="stylesheet" type="text/css" href="assets/css/font-awesome.css">
 
-    <link rel="stylesheet" href="assets/css/templatemo-klassy-cafe.css">
+    <link rel="stylesheet" href="assets/css/HAMK.css">
 
     <link rel="stylesheet" href="assets/css/owl-carousel.css">
 
@@ -35,15 +35,6 @@
 
 <body>
 
-<!-- ***** Preloader Start ***** -->
-<div id="preloader">
-    <div class="jumper">
-        <div></div>
-        <div></div>
-        <div></div>
-    </div>
-</div>
-<!-- ***** Preloader End ***** -->
 
 
 <!-- ***** Header Area Start ***** -->
@@ -71,7 +62,7 @@
 
                             @guest
                                 <a href="{{url('/login')}}">
-                                    Kosár[0]
+                                    Kosár
                                 </a>
                             @endguest
 
@@ -115,7 +106,7 @@
 
 
 <div id="top">
-   <h1 style="text-align: center; padding-top: 100px">sikeres fizetés, minden pacek</h1>
+   <h1 style="text-align: center; padding-top: 100px">Sikeres fizetés.</h1>
     <br>
     <a href="/redirects" class="clean-bth-button">VISSZA A FŐOLDALRA</a>
 </div>

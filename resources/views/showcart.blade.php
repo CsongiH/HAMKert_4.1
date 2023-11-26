@@ -25,7 +25,7 @@
 
     <link rel="stylesheet" type="text/css" href="assets/css/font-awesome.css">
 
-    <link rel="stylesheet" href="assets/css/templatemo-klassy-cafe.css">
+    <link rel="stylesheet" href="assets/css/HAMK.css">
 
     <link rel="stylesheet" href="assets/css/owl-carousel.css">
 
@@ -34,16 +34,6 @@
 </head>
 
 <body>
-
-<!-- ***** Preloader Start ***** -->
-<div id="preloader">
-    <div class="jumper">
-        <div></div>
-        <div></div>
-        <div></div>
-    </div>
-</div>
-<!-- ***** Preloader End ***** -->
 
 
 <!-- ***** Header Area Start ***** -->

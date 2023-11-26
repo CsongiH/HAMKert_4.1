@@ -1,7 +1,7 @@
 
 <html>
 <head>
-    <link rel="stylesheet" href="assets/css/templatemo-klassy-cafe.css">
+    <link rel="stylesheet" href="assets/css/HAMK.css">
 </head>
 @include("admin.admincss")
 <body>
@@ -35,30 +35,29 @@
     <div>
         <table class="clean-table">
             <tr>
-                <th style="padding: 30px">Étel</th>
-                <th style="padding: 30px">Ár</th>
-                <th style="padding: 30px">Leírás</th>
-                <th style="padding: 30px">Kép</th>
-                <th style="padding: 30px">Módosítás</th>
-                <th style="padding: 30px">Törlés</th>
+                <th style="padding-top: 30px;padding-bottom: 30px;text-align: left">Étel</th>
+                <th style="padding-top: 30px;padding-bottom: 30px;padding-right: 50px;text-align: center">Ár</th>
+                <th style="padding-top: 30px;padding-bottom: 30px;text-align: left">Leírás</th>
+                <th style="padding: 30px;text-align: center">Kép</th>
+                <th style="padding: 30px;text-align: center">Módosítás</th>
+                <th style="padding: 30px;text-align: center">Törlés</th>
             </tr>
             @foreach($data as $fooddata)
-            <tr text-align="center">
+            <tr>
                 <td>{{$fooddata->title}}</td>
                 <td>{{$fooddata->price}}</td>
                 <td>{{$fooddata->description}}</td>
                 <td><img height="150" width="150" src="/foodimage/{{$fooddata->image}}"></td>
-                <td><a href="{{url('/updateview',$fooddata->id)}}">Frissítés</a></td>
-                <td><a href="{{url('/deletemenu',$fooddata->id)}}">Törlés</a></td>
+                <td><a class="clean-admin-action" href="{{url('/updateview',$fooddata->id)}}">Frissítés</a></td>
+                <td><a class="clean-admin-action" href="{{url('/deletemenu',$fooddata->id)}}">Törlés</a></td>
             </tr>
             @endforeach
 
         </table>
-
     </div>
-
 </div>
 </div>
+<div>{{$data->links()}}</div>
 @include("admin.adminscript")
 </body>
 </html>

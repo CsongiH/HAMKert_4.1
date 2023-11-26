@@ -80,7 +80,7 @@ class HomeController extends Controller
         if (is_null(Auth::user())) {
             return redirect('/login');
         } else {
-            $data = food::paginate(1);
+            $data = food::paginate(6);
             $user_id = Auth::id();
             return view('menu', compact('data'));
         }

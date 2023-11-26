@@ -96,6 +96,50 @@ html, body {
     height: 40px;
 }
 
+.pagination {
+    display: flex;
+    list-style: none;
+    justify-content: center;
+    margin: 5px 0; /* Add some margin for spacing */
+}
+
+.pagination li {
+    margin: 0 5px;
+    display: inline-block;
+}
+
+.pagination a,
+.pagination span {
+    background-color: #333;
+    border: 1px solid transparent;
+    border-radius: 20px;
+    color: whitesmoke;
+    padding: 7px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.pagination a:hover,
+.pagination span:hover {
+    background-color: #fa5849;
+    color: white;
+}
+
+.pagination .active span {
+    background-color: #fa5849;
+}
+
+.pagination .disabled span {
+    background-color: #ddd;
+    color: #aaa;
+    cursor: not-allowed;
+}
+
 
 .grid-container {
     padding: 10px;
@@ -109,6 +153,20 @@ html, body {
     border: 0px transparent;
 }
 
+
+.clean-admin-action {
+    background-color: #242934;
+    color: whitesmoke;
+    border-radius: 20px;
+    padding: 10px;
+}
+.clean-admin-action:hover {
+    background-color: #008fe6;
+    color: white;
+    transition: background-color 0.5s, color 0.5s;
+}
+
+
 .clean-bth-button {
     text-align:center;
     color: #333;
@@ -119,6 +177,8 @@ html, body {
     padding: 10px;
     display: flow;
     align-items: center;
+    width: 20vw;
+margin-left: 40vw;
 }
 
 .clean-bth-button:hover {
@@ -251,18 +311,18 @@ border-radius: 20px;
 
 
 .clean-button {
-    background-color: #ffffff; /* White background */
-    border: 1px solid transparent; /* Fully transparent border */
+    background-color: #ffffff;
+    border: 1px solid transparent;
     border-radius: 20px;
-    color: #333; /* Text color */
-    padding: 7px 20px; /* Padding for button size */
+    color: #333;
+    padding: 7px 20px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
     font-family: 'Poppins', sans-serif;
     font-size: 16px;
-    cursor: pointer; /* Show a pointer cursor on hover */
-    transition: background-color 0.3s, color 0.3s; /* Smooth transitions on hover */
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
 }
 
 .clean-button:hover {

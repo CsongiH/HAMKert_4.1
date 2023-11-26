@@ -52,7 +52,7 @@
                                 </fieldset>
                             </div>
                             <div class="col-md-6 col-sm-12">
-                                <input type="number" name="Guests" placeholder="Vendégek száma*" required="">
+                                <input type="number" name="guest" placeholder="Vendégek száma*" required="">
                             </div>
                             <div class="col-lg-6">
                                 <div id="filterDate2">

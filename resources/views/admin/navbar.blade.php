@@ -1,4 +1,4 @@
-<link rel="stylesheet" href="assets/css/templatemo-klassy-cafe.css">
+<link rel="stylesheet" href="assets/css/HAMK.css">
 @include("admin.admincss")
 
 <nav class="sidebar sidebar-offcanvas" id="sidebar">

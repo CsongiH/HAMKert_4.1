@@ -16,7 +16,7 @@
 
     <link rel="stylesheet" type="text/css" href="assets/css/font-awesome.css">
 
-    <link rel="stylesheet" href="assets/css/templatemo-klassy-cafe.css">
+    <link rel="stylesheet" href="assets/css/HAMK.css">
 
     <link rel="stylesheet" href="assets/css/owl-carousel.css">
 
@@ -25,16 +25,6 @@
 </head>
 
 <body>
-
-<!-- ***** Preloader Start ***** -->
-<div id="preloader">
-    <div class="jumper">
-        <div></div>
-        <div></div>
-        <div></div>
-    </div>
-</div>
-<!-- ***** Preloader End ***** -->
 
 
 <!-- ***** Header Area Start ***** -->
@@ -193,36 +183,33 @@
             <div class="col-lg-4">
                 <div class="chef-item">
                     <div class="thumb">
-                        <div class="overlay"></div>
-                        <img src="assets/images/chefs-01.jpg" alt="Chef #1">
+                        <img src="assets/images/HorvathCsongor.png" alt="Chef #1">
                     </div>
                     <div class="down-content">
                         <h4>Horváth Csongor</h4>
-                        <span>Pastry Chef</span>
+                        <span>Séfkonyhafőnök</span>
                     </div>
                 </div>
             </div>
             <div class="col-lg-4">
                 <div class="chef-item">
                     <div class="thumb">
-                        <div class="overlay"></div>
-                        <img src="assets/images/chefs-02.jpg" alt="Chef #2">
+                        <img src="assets/images/AntalKristof.jpg" alt="Chef #2">
                     </div>
                     <div class="down-content">
                         <h4>Antal Kristóf</h4>
-                        <span>Cookie Chef</span>
+                        <span>Konyhamester</span>
                     </div>
                 </div>
             </div>
             <div class="col-lg-4">
                 <div class="chef-item">
                     <div class="thumb">
-                        <div class="overlay"></div>
-                        <img src="assets/images/chefs-03.jpg" alt="Chef #3">
+                        <img src="assets/images/MagasiBotond.jpg" alt="Chef #3">
                     </div>
                     <div class="down-content">
                         <h4>Magasi Botond</h4>
-                        <span>Pancake Chef</span>
+                        <span>Étteremigazgató</span>
                     </div>
                 </div>
             </div>
@@ -303,3 +290,4 @@
 </script>
 </body>
 </html>
+<!--feltoltes,-->
