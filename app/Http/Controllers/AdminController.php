@@ -104,7 +104,7 @@ class AdminController extends Controller
             ->where('carts.isPaid', 1)
             ->where('carts.isDone', 0)
             ->groupBy('carts.user_id')
-            ->paginate(1);
+            ->paginate(3);
         return view("admin.adminorders", compact("orders"));
     }
 
