@@ -12,15 +12,8 @@
     <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-    <title>Klassy Cafe - Restaurant HTML Template</title>
-    <!--
+    <title>HAMKert étterem</title>
 
-    TemplateMo 558 Klassy Cafe
-
-    https://templatemo.com/tm-558-klassy-cafe
-
-    -->
-    <!-- Additional CSS Files -->
     <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
 
     <link rel="stylesheet" type="text/css" href="assets/css/font-awesome.css">
@@ -47,7 +40,7 @@
 
 
                     <ul class="nav">
-                        <li><a href="/redirects" class="logo"><img src="assets/images/klassy-logo.png" id="logo-image"></a></li>
+                        <li><a href="/redirects" class="logo"><img src="assets/images/hamkert.png" id="logo-image"></a></li>
                         <li class="scroll-to-section"><a href="/redirects">Főoldal</a></li>
                         <li class="scroll-to-section"><a href="/redirects">Rólunk</a></li>
                         <li class="scroll-to-section"><a href="/menu">Menü</a></li>
@@ -56,7 +49,7 @@
                         <li class="scroll-to-section" style="background-color: rgba(231,231,231,0.91); border-radius: 20px " >
                             @auth
                                 <a href="{{url('/showcart',Auth::user()->id)}}">
-                                    Kosár[]
+                                    Kosár
                                 </a>
                             @endauth
 
@@ -79,7 +72,7 @@
                                 <form method="POST" action="{{ route('logout') }}">
                                     @csrf
                                     <button  href="{{ route('logout') }}"
-                                             class="clean-button">
+                                             class="HAM-button">
                                         {{ __('Kilépés') }}
                                     </button>
                                 </form>
@@ -108,7 +101,7 @@
 <div id="top">
    <h1 style="text-align: center; padding-top: 100px">Sikeres fizetés.</h1>
     <br>
-    <a href="/redirects" class="clean-bth-button">VISSZA A FŐOLDALRA</a>
+    <a href="/redirects" class="HAM-bth-button">VISSZA A FŐOLDALRA</a>
 </div>
 
 

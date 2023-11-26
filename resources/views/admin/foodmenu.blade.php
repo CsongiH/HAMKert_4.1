@@ -9,7 +9,7 @@
 @include("admin.navbar")
 
 <div style="position: relative;top: 60px; right: -150px">
-    <form class="clean-form" action="{{url('/uploadfood')}}" method="post" enctype="multipart/form-data" >
+    <form class="HAM-form" action="{{url('/uploadfood')}}" method="post" enctype="multipart/form-data" >
         @csrf
         <div>
             <label>Étel</label>
@@ -28,12 +28,12 @@
             <input style="color: ghostwhite" type="text" name="description" placeholder="Adja meg az étel leírását" required>
         </div>
         <div>
-            <input class="clean-button" type="submit" value="Mentés">
+            <input class="HAM-button" type="submit" value="Mentés">
         </div>
     </form>
 
     <div>
-        <table class="clean-table">
+        <table class="HAM-table">
             <tr>
                 <th style="padding-top: 30px;padding-bottom: 30px;text-align: left">Étel</th>
                 <th style="padding-top: 30px;padding-bottom: 30px;padding-right: 50px;text-align: center">Ár</th>
@@ -48,8 +48,8 @@
                 <td>{{$fooddata->price}}</td>
                 <td>{{$fooddata->description}}</td>
                 <td><img height="150" width="150" src="/foodimage/{{$fooddata->image}}"></td>
-                <td><a class="clean-admin-action" href="{{url('/updateview',$fooddata->id)}}">Frissítés</a></td>
-                <td><a class="clean-admin-action" href="{{url('/deletemenu',$fooddata->id)}}">Törlés</a></td>
+                <td><a class="HAM-admin-action" href="{{url('/updateview',$fooddata->id)}}">Frissítés</a></td>
+                <td><a class="HAM-admin-action" href="{{url('/deletemenu',$fooddata->id)}}">Törlés</a></td>
             </tr>
             @endforeach
 

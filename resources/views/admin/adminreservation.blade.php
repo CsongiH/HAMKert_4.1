@@ -6,7 +6,7 @@
 <div class="container-scroller">
 @include("admin.navbar")
 <div style="padding-top: 10vh">
-    <table class="clean-table">
+    <table class="HAM-table">
         <tr text-align="center" >
             <th style="font-weight: bolder; padding: 30px">Név</th>
             <th style="font-weight: bolder; padding: 30px">E-Mail</th>

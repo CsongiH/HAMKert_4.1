@@ -78,7 +78,7 @@
                                 <form method="POST" action="{{ route('logout') }}">
                                     @csrf
                                     <button  href="{{ route('logout') }}"
-                                             class="clean-button">
+                                             class="HAM-button">
                                         {{ __('Kilépés') }}
                                     </button>
                                 </form>
@@ -130,7 +130,7 @@
 <div style="display: flex;justify-content: center;align-items: center">
     <form action="/session" method="POST">
         <input type="hidden" name="_token" value="{{csrf_token()}}">
-        <button type="submit" id="checkout-live-button" class="clean-checkout-button" >Tovább a fizetéshez -></button>
+        <button type="submit" id="checkout-live-button" class="HAM-checkout-button" >Tovább a fizetéshez -></button>
     </form>
 </div>
 

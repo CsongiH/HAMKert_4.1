@@ -73,7 +73,7 @@
                         <span class="menu-title">
                             <button
                                 href="{{ route('logout') }}"
-                                class="clean-button-admin">
+                                class="HAM-button-admin">
                                 {{ __('Kilépés') }}
                             </button>
                         </span>

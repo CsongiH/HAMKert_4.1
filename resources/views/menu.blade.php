@@ -43,7 +43,7 @@
                         <li><a href="/redirects" class="logo"><img src="assets/images/hamkert.png" id="logo-image"></a></li>
                         <li class="scroll-to-section"><a href="/redirects">Főoldal</a></li>
                         <li class="scroll-to-section"><a href="/redirects">Rólunk</a></li>
-                        <li class="clean-current-button"><a href="#top">Menü</a></li>
+                        <li class="HAM-current-button"><a href="#top">Menü</a></li>
                         <li class="scroll-to-section"><a href="/redirects">Alapítók</a></li>
                         <li class="scroll-to-section"><a href="/redirects">Kapcsolat</a></li>
                         <li class="scroll-to-section" style="background-color: rgba(231,231,231,0.91); border-radius: 20px " >
@@ -72,7 +72,7 @@
                                 <form method="POST" action="{{ route('logout') }}">
                                     @csrf
                                     <button  href="{{ route('logout') }}"
-                                             class="clean-button">
+                                             class="HAM-button">
                                         {{ __('Kilépés') }}
                                     </button>
                                 </form>

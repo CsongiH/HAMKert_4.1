@@ -8,7 +8,7 @@
 
 @include("admin.navbar")
     <div style="position: relative;top: 60px; right: -150px; width: 70vw;height: fit-content;padding-bottom: 60px">
-        <form class="clean-form" action="{{url('/update',$data->id)}}" method="post" enctype="multipart/form-data">
+        <form class="HAM-form" action="{{url('/update',$data->id)}}" method="post" enctype="multipart/form-data">
             @csrf
             <div>
                 <label >Név</label>
@@ -27,7 +27,7 @@
                 <img height="150" width="150" src="/foodimage/{{$data->image}}">
             </div>
             <div>
-                <input style="margin-top: 10px" class="clean-button" type="submit" value="Mentés">
+                <input style="margin-top: 10px" class="HAM-button" type="submit" value="Mentés">
             </div>
         </form>
     </div>

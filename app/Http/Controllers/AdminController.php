@@ -19,7 +19,7 @@ class AdminController extends Controller
 {
     public function users()
     {
-        $data = user::all();
+        $data = user::paginate(5);
         return view("admin.users", compact("data"));
     }
 

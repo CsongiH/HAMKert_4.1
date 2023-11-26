@@ -154,20 +154,20 @@ html, body {
 }
 
 
-.clean-admin-action {
+.HAM-admin-action {
     background-color: #242934;
     color: whitesmoke;
     border-radius: 20px;
     padding: 10px;
 }
-.clean-admin-action:hover {
+.HAM-admin-action:hover {
     background-color: #008fe6;
     color: white;
     transition: background-color 0.5s, color 0.5s;
 }
 
 
-.clean-bth-button {
+.HAM-bth-button {
     text-align:center;
     color: #333;
     background-color: #FA5849FF;
@@ -181,13 +181,13 @@ html, body {
 margin-left: 40vw;
 }
 
-.clean-bth-button:hover {
+.HAM-bth-button:hover {
 color: whitesmoke;
     background: #333;
     transition: background-color 0.5s, color 0.5s;
 }
 
-.clean-quantity-set {
+.HAM-quantity-set {
     width: 66%;
 }
 
@@ -210,7 +210,7 @@ color: whitesmoke;
 }
 
 
-.clean-checkout-button {
+.HAM-checkout-button {
     text-align:center;
     color: #2a2a2a;
     background-color: rgba(231,231,231,0.91);
@@ -224,14 +224,14 @@ color: whitesmoke;
     margin-top: 30px;
 }
 
-.clean-checkout-button:hover{
+.HAM-checkout-button:hover{
     background: #2a2a2a;
     color:#FA5849FF;
     transition: background-color 0.5s, color 0.5s;
 }
 
 
-.clean-current-button{
+.HAM-current-button{
     background-color: #FA5849FF;
     border: 1px solid transparent;
     color: #333;
@@ -244,21 +244,21 @@ border-radius: 20px;
 }
 
 
-.clean-form {
+.HAM-form {
     background-color: #222; /* Dark background for the form */
     padding: 20px;
 }
 
-.clean-form label {
+.HAM-form label {
     color: #fff; /* Text color for form labels */
     display: block;
     margin-bottom: 10px;
 }
 
-.clean-form input[type="text"],
-.clean-form input[type="number"],
-.clean-form input[type="file"],
-.clean-form input[type="email"] {
+.HAM-form input[type="text"],
+.HAM-form input[type="number"],
+.HAM-form input[type="file"],
+.HAM-form input[type="email"] {
     width: 100%;
     padding: 10px;
     margin-bottom: 15px;
@@ -267,7 +267,7 @@ border-radius: 20px;
     border: 1px solid #555; /* Slightly lighter border for input fields */
 }
 
-.clean-form input[type="submit"] {
+.HAM-form input[type="submit"] {
     background-color: #444; /* Dark gray background for the submit button */
     color: #fff; /* Text color for the submit button */
     border: 1px solid #555; /* Slightly lighter border for the submit button */
@@ -279,7 +279,7 @@ border-radius: 20px;
 
 
 
-.clean-table {
+.HAM-table {
     width: 70vw;
     border-collapse: collapse;
     background-color: transparent; /* Dark background for the table */
@@ -287,22 +287,22 @@ border-radius: 20px;
     border-radius: 20px;
 }
 
-.clean-table th, .clean-table td {
+.HAM-table th, .HAM-table td {
     border: 1px transparent; /* Fully transparent border for table cells */
     padding: 10px;
     text-align: left;
     height: 50px;
 }
 
-.clean-table th {
+.HAM-table th {
     background-color: #242934; /* Dark gray background for table header */
 }
 
-.clean-table tr:nth-child(even) {
+.HAM-table tr:nth-child(even) {
     background-color: #333; /* Dark gray background for even rows */
 }
 
-.clean-table tr:nth-child(odd) {
+.HAM-table tr:nth-child(odd) {
     background-color: #222; /* Dark background for odd rows */
 }
 
@@ -310,7 +310,7 @@ border-radius: 20px;
 
 
 
-.clean-button {
+.HAM-button {
     background-color: #ffffff;
     border: 1px solid transparent;
     border-radius: 20px;
@@ -325,12 +325,12 @@ border-radius: 20px;
     transition: background-color 0.3s, color 0.3s;
 }
 
-.clean-button:hover {
+.HAM-button:hover {
     background-color: #fa5849; /* Light gray background on hover */
     color: white; /* Darker text color on hover */
 }
 
-.clean-button-admin {
+.HAM-button-admin {
     background-color: #191c24; /* White background */
     border: 4px solid transparent; /* Fully transparent border */
     border-radius: 20px;
@@ -345,7 +345,7 @@ border-radius: 20px;
     transition: background-color 0.3s, color 0.3s; /* Smooth transitions on hover */
 }
 
-.clean-button-admin:hover {
+.HAM-button-admin:hover {
     background-color: #fa5849  ; /* Light gray background on hover */
     color: #ffffff; /* Darker text color on hover */
 }

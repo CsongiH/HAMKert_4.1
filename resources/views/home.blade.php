@@ -67,7 +67,7 @@
                                                 <form method="POST" action="{{ route('logout') }}">
                                                     @csrf
                                                     <button  href="{{ route('logout') }}"
-                                                             class="clean-button">
+                                                             class="HAM-button">
                                                         {{ __('Kilépés') }}
                                                     </button>
                                                 </form>

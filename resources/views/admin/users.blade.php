@@ -8,7 +8,7 @@
 <div class="container-scroller">
 @include("admin.navbar")
     <div style="position: relative; top: 60px; right: -150px ">
-        <table class="clean-table">
+        <table class="HAM-table">
             <tr>
                 <th style="padding: 30px">Név</th>
                 <th style="padding: 30px">E-Mail</th>
@@ -19,7 +19,7 @@
                 <td style="padding: 30px">{{$userdata->name}}</td>
                 <td style="padding: 30px">{{$userdata->email}}</td>
                 @if($userdata->usertype=="0")
-                    <td style="padding: 30px"><a class="clean-admin-action" href="{{url('/deleteuser', $userdata->id)}}">Törlés</a></td>
+                    <td style="padding: 30px"><a class="HAM-admin-action" href="{{url('/deleteuser', $userdata->id)}}">Törlés</a></td>
                 @else
                     <td style="padding: 30px">Nem törölhető</td>
             </tr>
@@ -27,8 +27,8 @@
             @endforeach
         </table>
     </div>
-
     </div>
+<div>{{$data->links()}}</div>
 @include("admin.adminscript")
 </body>
 </html>
